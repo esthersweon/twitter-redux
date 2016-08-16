@@ -1,21 +1,18 @@
-# React Tutorial
+# Twitter Redux App
 
-There is a simple node server implementation included. It simply serves static files from `public/` and handles requests to `tweets.json` to fetch or add data. 
-
+### Goal
+Converting the Twitter React app at https://github.com/esthersweon/gdi-react-workshop into a Redux app.
 
 ### Dependencies
 
 Make sure you have node and npm installed. 
 
 ```sh
-brew install node
-brew update
-
 node -v
 npm -v
 ```
 
-### To Start Server
+### To Start Server and Run Gulp to Compile JSX to JavaScript While Developing
 
 ```sh
 npm install
@@ -23,10 +20,3 @@ npm start
 ```
 
 Visit <http://localhost:3000/>.
-
-
-### To Compile JSX to Javascript While Developing
-
-```sh
-gulp
-```
