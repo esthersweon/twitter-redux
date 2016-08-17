@@ -1,7 +1,7 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React, { PropTypes } from 'react';
+import ReactDOM from 'react-dom';
 
-var Tweet = React.createClass({
+const Tweet = React.createClass({
   render: function () {
     return (
       <div className="tweet">
@@ -12,4 +12,4 @@ var Tweet = React.createClass({
   }
 });
 
-module.exports = Tweet;
+export default Tweet;

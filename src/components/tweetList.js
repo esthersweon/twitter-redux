@@ -1,8 +1,8 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var Tweet = require('./tweet');
+import React, { PropTypes } from 'react';
+import ReactDOM from 'react-dom';
+import Tweet from './tweet';
 
-var TweetList = React.createClass({
+const TweetList = React.createClass({
   render: function () {
     var tweetData = this.props.data;
     var tweetNodes = tweetData.map(function (tweet) {
@@ -17,4 +17,4 @@ var TweetList = React.createClass({
   }
 });
 
-module.exports = TweetList;
+export default TweetList;

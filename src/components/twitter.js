@@ -1,9 +1,9 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var TweetForm = require('./tweetForm');
-var TweetList = require('./tweetList');
+import React, { PropTypes } from 'react';
+import ReactDOM from 'react-dom';
+import TweetForm from './tweetForm';
+import TweetList from './tweetList';
 
-var Twitter = React.createClass({
+const Twitter = React.createClass({
   getInitialState: function () {
     return { data: [] };
   },
@@ -35,4 +35,4 @@ var Twitter = React.createClass({
   }
 });
 
-module.exports = Twitter;
+export default Twitter;

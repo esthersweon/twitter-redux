@@ -1,7 +1,7 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React, { PropTypes } from 'react';
+import ReactDOM from 'react-dom';
 
-var TweetForm = React.createClass({
+const TweetForm = React.createClass({
   handleSubmit: function(e) {
     e.preventDefault();
 
@@ -28,4 +28,4 @@ var TweetForm = React.createClass({
   }
 });
 
-module.exports = TweetForm;
+export default TweetForm;
