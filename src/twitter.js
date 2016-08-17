@@ -8,7 +8,6 @@ var Twitter = React.createClass({
     return { data: [] };
   },
   loadTweetsFromServer: function () {
-    // GET updated set of tweets from database
     $.get(this.props.url, function (data) {
         this.setState({ data: data });
       }.bind(this)
@@ -17,14 +16,12 @@ var Twitter = React.createClass({
   handleTweetSubmit: function (author, text) {
     var tweet = { author: author, text: text };
 
-    // POST to add tweet to database
     $.post(this.props.url, tweet, function (data) {
         this.setState({ data: data });
       }.bind(this)
     );
   },
   componentDidMount: function () {
-    // Set this.state.data to most recent set of tweets from database
     this.loadTweetsFromServer();
   },
   render: function () {
