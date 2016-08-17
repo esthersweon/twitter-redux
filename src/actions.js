@@ -1,0 +1,2 @@
+exports.GET_TWEETS = 'GET_TWEETS';
+exports.ADD_TWEET = 'ADD_TWEET';
