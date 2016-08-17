@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import ReactDOM from 'react-dom';
-import TweetForm from './tweetForm';
-import TweetList from './tweetList';
+import VisibleTweetForm from './visibleTweetForm';
+import VisibleTweetList from './visibleTweetList';
 
 const Twitter = React.createClass({
   getInitialState: function () {
@@ -29,10 +29,14 @@ const Twitter = React.createClass({
       <div className="twitter">
         <h1>Tweets</h1>
         <TweetForm onTweetSubmit={ this.handleTweetSubmit } />
-        <TweetList data={ this.state.data } />
+        <VisibleTweetList data={ this.state.data } />
       </div>
     );
   }
 });
+
+Twitter.defaultProps = {
+  data: PropTypes.array.isRequired
+}
 
 export default Twitter;

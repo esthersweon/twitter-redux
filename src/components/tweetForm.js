@@ -28,4 +28,8 @@ const TweetForm = React.createClass({
   }
 });
 
+TweetForm.defaultProps = {
+  onTweetSubmit: PropTypes.func.isRequired
+};
+
 export default TweetForm;

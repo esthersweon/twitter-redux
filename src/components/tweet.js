@@ -12,4 +12,9 @@ const Tweet = React.createClass({
   }
 });
 
+Tweet.defaultProps = {
+	text: PropTypes.string.isRequired,
+	author: PropTypes.string.isRequired
+};
+
 export default Tweet;

@@ -17,4 +17,8 @@ const TweetList = React.createClass({
   }
 });
 
+TweetList.defaultProps = {
+  data: PropTypes.array.isRequired
+};
+
 export default TweetList;
