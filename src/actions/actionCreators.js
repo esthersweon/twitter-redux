@@ -1,23 +1,25 @@
 import { GET_TWEETS, ADD_TWEET } from './actionTypes';
 
-export default getTweets = () => {
+const getTweets = () => {
   return {
     type: GET_TWEETS,
     data: {}
   }
 }
 
-export default addTweet = (text, author) => {
-	return {
+const addTweet = (text, author) => {
+  // let tweet = { text, author };
+
+  // $.post("tweets.json", tweet, (data) => {
+      // this.setState({ data: data });
+  return {
 		type: ADD_TWEET,
-		data: {
-			text,
-			author
-		}
-	}
+		data: { text, author }
+	};
+  // );
 }
 
-// module.exports = {
-// 	getTweets: getTweets,
-// 	addTweet: addTweet
-// }
+module.exports = {
+	getTweets: getTweets,
+	addTweet: addTweet
+};

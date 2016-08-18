@@ -1,9 +1,8 @@
 import { createStore } from 'redux';
-import twitterApp from './reducers';
+import twitterApp from './reducers/tweetsReducer';
+// import { getTweets, addTweet } from './actions/actionCreators';
 
 let store = createStore(twitterApp, window.STATE_FROM_SERVER);
-
-// import { getTweets, addTweet } from './actions';
 
 // Log the initial state
 // console.log(store.getState())
@@ -11,13 +10,13 @@ let store = createStore(twitterApp, window.STATE_FROM_SERVER);
 // Every time the state changes, log it
 // Note that subscribe() returns a function for unregistering the listener
 // let unsubscribe = store.subscribe(() =>
-//   console.log(store.getState())
+//   console.log("State changed: ", store.getState())
 // )
 
 // Dispatch some actions
 // store.dispatch(getTweets());
-// store.dispatch(addTweet({author: 'Esther', text: 'It is working!'}));
+// store.dispatch(addTweet('Example author', 'Example text'));
 
-// unsubscribe()
+// unsubscribe();
 
 export default store;

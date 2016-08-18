@@ -3,17 +3,12 @@ import ReactDOM from 'react-dom';
 import Tweet from './tweet';
 
 const TweetList = React.createClass({
-  render: function () {
-    var tweetData = this.props.data;
-    var tweetNodes = tweetData.map(function (tweet) {
-      return <Tweet author={ tweet.author } text={ tweet.text } />
-    });
-
-    return (
-      <div className="tweetList">
-        { tweetNodes }
-      </div>
-    );
+  render: function(){
+    return <div className="tweetList">
+      { this.props.data.map(tweet => {
+        return <Tweet author={ tweet.author } text={ tweet.text } />
+      }) }
+    </div>
   }
 });
 

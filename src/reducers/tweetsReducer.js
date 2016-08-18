@@ -24,10 +24,8 @@ function tweets(state, action) {
 
 var tweetsReducer = (state = initialState, action) => {
   return {
-    tweets: tweets(state.tweets, action),
+    tweets: tweets(state.tweets, action)
   }
 }
 
-export default {
-  tweetsReducer: tweetsReducer
-};
+export default tweetsReducer;

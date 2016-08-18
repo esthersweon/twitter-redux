@@ -1,8 +1,12 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import Twitter from './components/twitter';
+import store from './store';
 
 ReactDOM.render(
-  <Twitter url="tweets.json" />,
-  document.getElementById('tweets')
+  <Provider store={ store }>
+  	<Twitter/>
+  </Provider>,
+  document.getElementById('twitter')
 );
