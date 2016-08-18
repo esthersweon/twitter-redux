@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { GET_TWEETS, ADD_TWEET } from '../actions/actionTypes';
+import { GET_TWEETS, ADD_TWEET } from '../actions/tweetActions';
 
 const initialState = {
   tweets: []
@@ -8,17 +8,20 @@ const initialState = {
 const tweets = (state, action) => {
   switch (action.type) {
     case GET_TWEETS:
-      return state;
+      return [
+        ...action.data,
+        ...state
+      ];
     case ADD_TWEET:
       return [
-        ...state,
         {
           text: action.data.text,
           author: action.data.author
-        }
+        },
+        ...state
       ];
     default:
-      return state
+      return state;
   }
 }
 

@@ -1,7 +1,0 @@
-const GET_TWEETS = 'GET_TWEETS';
-const ADD_TWEET = 'ADD_TWEET';
-
-module.exports = {
-	GET_TWEETS: GET_TWEETS,
-	ADD_TWEET: ADD_TWEET
-}

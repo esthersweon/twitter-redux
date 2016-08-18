@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import TweetList from '../presentation/tweetList';
 // import { TweetList } from '../presentation';
-import { getTweets } from '../../actions/actionCreators';
+import { getTweets } from '../../actions/tweetActions';
 
 const mapStateToProps = (state) => {
 	return { data: state.tweets };
@@ -9,7 +9,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-  	loadTweetsFromServer: dispatch(getTweets())
+  	loadTweets: () => {
+  		dispatch(getTweets());
+  	}
   };
 }
 
