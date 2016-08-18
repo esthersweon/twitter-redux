@@ -11,10 +11,10 @@ const getTweetsAction = (tweets) => {
   }
 };
 
-const addTweetAction = (text, author) => {
+const addTweetAction = (id, text, author) => {
   return {
 		type: ADD_TWEET,
-		data: { text, author }
+		data: { id, text, author }
 	};
 };
 
@@ -49,7 +49,7 @@ export const addTweet = (text, author) => {
   return dispatch => {
     let id = getRandomAlphanumericStr();
     return addTweetToDb(id, text, author).then(data => {
-      dispatch(addTweetAction(text, author));
+      dispatch(addTweetAction(id, text, author));
     });
   };
 };

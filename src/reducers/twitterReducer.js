@@ -15,6 +15,7 @@ const tweets = (state, action) => {
     case ADD_TWEET:
       return [
         {
+          id: action.data.id,
           text: action.data.text,
           author: action.data.author
         },
