@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { addTweet } from '../../actions/actionCreators';
-import TweetForm from '../tweetForm';
+import TweetForm from '../presentation/tweetForm';
+// import { TweetForm } from '../presentation';
 
 const mapStateToProps = (state) => {
 	return {};

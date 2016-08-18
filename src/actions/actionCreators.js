@@ -5,7 +5,7 @@ const getTweets = () => {
     type: GET_TWEETS,
     data: {}
   }
-}
+};
 
 const addTweet = (text, author) => {
   // let tweet = { text, author };
@@ -17,7 +17,15 @@ const addTweet = (text, author) => {
 		data: { text, author }
 	};
   // );
-}
+};
+
+const getTweetsFromDb = (dispatch) => {
+  dispatch(getTweets);
+};
+
+const addTweetToDb = (dispatch) => {
+  dispatch(addTweet);
+};
 
 module.exports = {
 	getTweets: getTweets,

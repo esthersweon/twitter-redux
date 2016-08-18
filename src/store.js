@@ -1,8 +1,8 @@
 import { createStore } from 'redux';
-import twitterApp from './reducers/tweetsReducer';
+import { twitter } from './reducers';
 // import { getTweets, addTweet } from './actions/actionCreators';
 
-let store = createStore(twitterApp, window.STATE_FROM_SERVER);
+let store = createStore(twitter, window.STATE_FROM_SERVER);
 
 // Log the initial state
 // console.log(store.getState())

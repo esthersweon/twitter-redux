@@ -5,7 +5,7 @@ const initialState = {
   tweets: []
 }
 
-function tweets(state, action) {
+const tweets = (state, action) => {
   switch (action.type) {
     case GET_TWEETS:
       return state;
@@ -22,10 +22,10 @@ function tweets(state, action) {
   }
 }
 
-var tweetsReducer = (state = initialState, action) => {
+const twitterReducer = (state = initialState, action) => {
   return {
     tweets: tweets(state.tweets, action)
   }
 }
 
-export default tweetsReducer;
+export default twitterReducer;

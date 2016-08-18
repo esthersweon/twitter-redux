@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
-import TweetList from '../tweetList';
+import TweetList from '../presentation/tweetList';
+// import { TweetList } from '../presentation';
 import { getTweets } from '../../actions/actionCreators';
 
 const mapStateToProps = (state) => {
