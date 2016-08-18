@@ -9,7 +9,7 @@ const TweetList = React.createClass({
   render: function(){
     return <div className="tweetList">
       { this.props.data.map((tweet, idx) => {
-        return <Tweet key={ idx } author={ tweet.author } text={ tweet.text } />
+        return <Tweet key={ tweet.id } author={ tweet.author } text={ tweet.text } />
       }) }
     </div>
   }

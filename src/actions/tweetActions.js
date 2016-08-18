@@ -1,3 +1,5 @@
+import { getRandomAlphanumericStr } from '../utils';
+
 export const GET_TWEETS = 'GET_TWEETS';
 export const ADD_TWEET = 'ADD_TWEET';
 
@@ -25,12 +27,12 @@ const fetchTweetsFromDb = () => {
   }).then(res => res.json());
 };
 
-const addTweetToDb = (text, author) => {
+const addTweetToDb = (id, text, author) => {
   return fetch(`/tweets.json`, {
     method      : 'POST',
     credentials : 'same-origin',
     headers     : new Headers({ 'Content-Type' : 'application/json '}),
-    body        : JSON.stringify({ text, author })
+    body        : JSON.stringify({ id, text, author })
   }).then(res => res.json());
 };
 
@@ -45,7 +47,8 @@ export const getTweets = () => {
 
 export const addTweet = (text, author) => {
   return dispatch => {
-    return addTweetToDb(text, author).then(data => {
+    let id = getRandomAlphanumericStr();
+    return addTweetToDb(id, text, author).then(data => {
       dispatch(addTweetAction(text, author));
     });
   };
