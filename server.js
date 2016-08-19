@@ -4,6 +4,9 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 
+app.set('view engine', 'html');
+app.set('views', './static');
+
 app.set('port', (process.env.PORT || 3000));
 
 app.use('/', express.static(path.join(__dirname, 'build')));
@@ -26,6 +29,10 @@ app.post('/tweets.json', function(req, res) {
       res.json(tweets);
     });
   });
+});
+
+app.get('/*', function(req, res) {
+  res.sendFile('static/index.html', {root: __dirname});
 });
 
 app.listen(app.get('port'), function() {
