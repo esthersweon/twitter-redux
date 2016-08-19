@@ -1,13 +1,13 @@
 import { createStore, compose, applyMiddleware } from 'redux';
-import { twitter } from './reducers';
+import appReducers from './reducers';
 import thunkMiddleware from 'redux-thunk';
 // import { getTweets, addTweet } from './actions/tweetActions';
 
-// let store = createStore(twitter, window.STATE_FROM_SERVER);
+// let store = createStore(appReducers, window.STATE_FROM_SERVER);
 const store = compose(
 	applyMiddleware(thunkMiddleware),
 	window.devToolsExtension ? window.devToolsExtension() : f => f
-)(createStore)(twitter);
+)(createStore)(appReducers);
 
 // Log the initial state
 // console.log(store.getState())

@@ -1,11 +1,9 @@
 import { combineReducers } from 'redux';
 import { GET_TWEETS, ADD_TWEET } from '../actions/tweetActions';
 
-const initialState = {
-  tweets: []
-}
+const initialState = [];
 
-const tweets = (state, action) => {
+const tweetsReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_TWEETS:
       return [
@@ -24,12 +22,6 @@ const tweets = (state, action) => {
     default:
       return state;
   }
-}
+};
 
-const twitterReducer = (state = initialState, action) => {
-  return {
-    tweets: tweets(state.tweets, action)
-  }
-}
-
-export default twitterReducer;
+export default tweetsReducer;

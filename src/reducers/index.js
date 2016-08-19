@@ -1,5 +1,10 @@
-import twitterReducer from './twitterReducer';
+import { combineReducers } from 'redux';
+import { routerReducer } from 'react-router-redux';
+import tweetsReducer from './tweetsReducer';
 
-module.exports = {
-	twitter: twitterReducer
-};
+let appState = combineReducers({
+	routing: routerReducer,
+	tweets: tweetsReducer
+});
+
+export default appState;
