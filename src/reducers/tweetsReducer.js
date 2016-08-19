@@ -1,33 +1,27 @@
 import { combineReducers } from 'redux';
-import { GET_TWEETS, ADD_TWEET } from '../actions/actionTypes';
+import { GET_TWEETS, ADD_TWEET } from '../actions/tweetActions';
 
-const initialState = {
-  tweets: []
-}
+const initialState = [];
 
-function tweets(state, action) {
+const tweetsReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_TWEETS:
-      return state;
+      return [
+        ...action.data,
+        ...state
+      ];
     case ADD_TWEET:
       return [
-        ...state,
         {
+          id: action.data.id,
           text: action.data.text,
           author: action.data.author
-        }
+        },
+        ...state
       ];
     default:
-      return state
+      return state;
   }
-}
-
-var tweetsReducer = (state = initialState, action) => {
-  return {
-    tweets: tweets(state.tweets, action),
-  }
-}
-
-export default {
-  tweetsReducer: tweetsReducer
 };
+
+export default tweetsReducer;
