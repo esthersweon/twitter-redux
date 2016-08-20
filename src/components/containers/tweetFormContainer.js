@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { addTweet } from '../../actions/tweetActions';
+import addTweet from '../../actions/tweets/addTweet';
 import TweetForm from '../presentation/tweetForm';
 // import { TweetForm } from '../presentation';
 

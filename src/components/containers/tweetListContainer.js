@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 import TweetList from '../presentation/tweetList';
-// import { TweetList } from '../presentation';
-import { getTweets } from '../../actions/tweetActions';
+import getTweets from '../../actions/tweets/getTweets';
 
 const mapStateToProps = (state) => {
 	return { data: state.tweets };
@@ -13,7 +12,7 @@ const mapDispatchToProps = (dispatch) => {
   		dispatch(getTweets());
   	}
   };
-}
+};
 
 const TweetListContainer = connect(
   mapStateToProps,
