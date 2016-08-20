@@ -13,6 +13,8 @@ app.use('/', express.static(path.join(__dirname, 'build')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+app.use(express.static('node_modules'));
+
 app.get('/tweets.json', function(req, res) {
   fs.readFile('tweets.json', function(err, data) {
     res.setHeader('Cache-Control', 'no-cache');

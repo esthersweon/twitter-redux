@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import ReactDOM from 'react-dom';
+import { Button } from 'react-bootstrap';
 
 const TweetForm = React.createClass({
   handleSubmit: function(e) {
@@ -22,7 +23,7 @@ const TweetForm = React.createClass({
       <form className="tweetForm" onSubmit={ this.handleSubmit }>
         <input type="text" placeholder="Author Name" ref="author" />
         <input type="text" placeholder="Tweet" ref="text" />
-        <button type="submit" className="btn btn-info">Tweet</button>
+        <Button bsType="submit" bsStyle="info">Tweet</Button>
       </form>
     );
   }

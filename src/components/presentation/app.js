@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Twitter from './twitter';
 import Header from './header';
 import Sidenav from './sidenav';
+import Content from './content';
 
 const App = (props) => {
 	return <div>
 		<Header/>
 		<Sidenav/>
-		{ props.children }
+		<Content>
+			{ props.children }
+		</Content>
 	</div>;
 };
 

@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import ReactDOM from 'react-dom';
-import { TweetFormContainer, TweetListContainer } from '../containers';
+import { TweetFormContainer, TweetListContainer } from '../../containers';
 
 const Twitter = React.createClass({
   render: function () {
